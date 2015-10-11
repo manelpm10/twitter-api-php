@@ -89,6 +89,12 @@ class TwitterAPIExchange
         $this->consumer_key = $settings['consumer_key'];
         $this->consumer_secret = $settings['consumer_secret'];
     }
+    
+    public function resetGetAndPostFields()
+    {
+        $this->postfields = null;
+        $this->getfield   = null;
+    }
 
     /**
      * Set postfields array, example: array('screen_name' => 'J7mbo')
